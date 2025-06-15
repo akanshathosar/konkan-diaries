@@ -1,0 +1,755 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* ✅ This enables vertical scrolling when needed */
+}
+
+/* Style the logo and title container */
+.navbar-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo image */
+#logo {
+    width: 60px;
+    height: auto;
+}
+
+/* Title beside logo */
+.navbar-header-custom h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+/* Align the nav menu to the right */
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Optional: spacing between nav items */
+.navbar-nav {
+    gap: 20px;
+}
+
+/* Optional: style for nav links */
+.nav-link {
+    font-weight: 500;
+    color: #333 !important;
+}
+
+.nav-link:hover {
+    color: #ff6600 !important;
+}
+
+/* Featured section */
+.bg-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.box-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styles */
+h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Responsive Font Sizes */
+.font-size30 {
+    font-size: 30px;
+}
+
+.sm-font-size28 {
+    font-size: 28px;
+}
+
+.xs-font-size22 {
+    font-size: 22px;
+}
+
+.line-height-40 {
+    line-height: 40px;
+}
+
+.xs-line-height-28 {
+    line-height: 28px;
+}
+
+/* Button Style */
+.btn-blog {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-blog:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Ensure cards fill height */
+.card.h-100 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Optional: Z-index utility */
+.z-index-9 {
+    z-index: 9;
+}
+
+/* Make main containers wider */
+.container,
+.container-fluid {
+    max-width: 1440px; /* or 100% for full width */
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Make cards larger and more spacious */
+.card {
+    min-height: 450px; /* adjust as needed */
+    padding: 30px;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+/* Increase background card height */
+.bg-img {
+    min-height: 450px; /* taller background image section */
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 767px) {
+    .container,
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card {
+        min-height: 300px;
+        padding: 20px;
+    }
+}
+
+/* Optional: Padding adjustment on smaller devices */
+@media (max-width: 767px) {
+    .font-size30 {
+        font-size: 24px;
+    }
+
+    .line-height-40 {
+        line-height: 32px;
+    }
+}
+
+/* ===== TRENDING SECTION STYLES ===== */
+#trending {
+    background-color: #fdfdfd; /* Light background */
+    padding: 60px 0;
+}
+
+#trending .blog-slider {
+    position: relative;
+}
+
+#trending .blog__slide {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#trending .blog__slide:hover {
+    transform: translateY(-8px);
+}
+
+#trending .blog__slide__img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#trending .blog__slide__content {
+    padding: 20px;
+}
+
+#trending .blog__slide__label {
+    display: inline-block;
+    font-weight: 600;
+    color: #ff6600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+#trending .blog__slide__content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#trending .blog__slide__content h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+#trending .blog__slide__content h3 a:hover {
+    color: #ff6600;
+}
+
+#trending .blog__slide__content p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Owl Nav Custom Arrows */
+#trending .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#trending .owl-nav button {
+    background: none;
+    border: none;
+    pointer-events: all;
+}
+
+#trending .blog-slider__leftArrow img,
+#trending .blog-slider__rightArrow img {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #trending .blog__slide__img img {
+        height: 180px;
+    }
+
+    #trending .blog__slide__content {
+        padding: 15px;
+    }
+
+    #trending .blog__slide__content h3 {
+        font-size: 16px;
+    }
+}
+
+/* Album Section Container Styling */
+#album {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+/* Portfolio Grid Styling */
+#album .portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Reset Bootstrap column padding/margin */
+#album .portfolio > .col-md-6,
+#album .portfolio > .col-lg-4 {
+  all: unset;
+}
+
+/* Grid Card Styling */
+#album .grid {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#album .grid:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid Image Styling */
+#album .grid-img img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+}
+
+/* Grid Text Details */
+#album .grid-details {
+  padding: 15px;
+}
+
+#album .grid-details .category {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+#album .grid-details h5 {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+#album .grid-details p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  #album .portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  #album .portfolio {
+    grid-template-columns: 1fr;
+  }
+}
+
+#contact {
+  padding: 60px 0;
+  background: #fff;
+}
+
+#contact .info-item {
+  background-color: #3b4a5a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 16px; 
+  margin-bottom: 16px; 
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+#contact .info-item i {
+  font-size: 20px;
+  padding: 10px;
+  background: #2c3a48;
+  border-radius: 6px;
+}
+
+#contact .info-item a {
+  color: #fff; 
+  text-decoration: none;
+}
+
+#contact .info-item a:hover {
+  text-decoration: underline;
+}
+
+#contact .php-email-form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50; 
+  border-bottom: 2px solid #3b4a5a;
+  display: inline-block;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#contact .php-email-form .form-control {
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+#contact .php-email-form button {
+  background-color: #3b4a5a;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+}
+
+#contact .php-email-form button:hover {
+  background-color: #2c3a48;
+}
+
+/* Footer Base */
+footer {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 15px;
+}
+
+/* Image size class */
+.width-70 {
+    width: 200px;
+    height: auto;
+}
+
+/* Optional: Add responsiveness and alignment */
+@media (max-width: 576px) {
+    .width-70 {
+        width: 60px;
+    }
+}
+
+.sm-margin-40px-bottom {
+    margin-bottom: 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* Padding utilities */
+.padding-90px-top {
+    padding-top: 90px;
+}
+.md-padding-70px-top {
+    padding-top: 70px;
+}
+.sm-padding-50px-top {
+    padding-top: 50px;
+}
+.padding-30px-left {
+    padding-left: 30px;
+}
+.padding-50px-left {
+    padding-left: 50px;
+}
+.sm-no-padding-left {
+    padding-left: 0;
+}
+.padding-30px-bottom {
+    padding-bottom: 30px;
+}
+.margin-60px-top {
+    margin-top: 60px;
+}
+.sm-margin-40px-bottom {
+    margin-bottom: 40px;
+}
+.mobile-margin-40px-bottom {
+    margin-bottom: 40px;
+}
+.margin-5px-top {
+    margin-top: 5px;
+}
+.xs-no-margin-top {
+    margin-top: 0 !important;
+}
+
+/* Title Styles */
+.footer-title-style1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+.list-style-1 {
+    list-style: none;
+    padding: 0;
+}
+.list-style-1 li {
+    margin-bottom: 10px;
+}
+.list-style-1 li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.list-style-1 li a:hover {
+    color: #007bff;
+}
+
+/* Newsletter Form */
+.newsletter-form .form-control {
+    border: none;
+    border-radius: 50px 0 0 50px;
+    padding: 10px 15px;
+    box-shadow: none;
+}
+.newsletter-form .btn {
+    border-radius: 0 50px 50px 0;
+    background: #fff;
+    border: none;
+}
+.newsletter-form .btn i {
+    font-size: 16px;
+}
+
+/* Social Icons */
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.social-links li a {
+    color: #555;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.social-links li a:hover {
+    color: #007bff;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+    .padding-90px-top {
+        padding-top: 50px;
+    }
+    .padding-50px-left,
+    .padding-30px-left {
+        padding-left: 0;
+    }
+    .float-left,
+    .float-right {
+        float: none !important;
+        text-align: center;
+    }
+}
+
+#about {
+  padding: 60px 0;
+  background-color: #f8f9fa; 
+  color: #333;
+}
+
+#about .who-we-are {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #2c3e50;         
+  letter-spacing: 2px;
+  font-size: 1.8rem;       
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+
+#about h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+#about .fst-italic {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#about ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#about ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+#about ul li i {
+  color: #3b4a5a;
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Image Styling */
+#about .about-images img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+#about .about-images img:hover {
+  transform: scale(1.02);
+}
+
+.about-images .img-fluid {
+  border-radius: 12px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-images .img-fluid:hover {
+  transform: scale(1.02);
+}
+
+.large-image {
+  height: 100%;
+  min-height: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.small-image {
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+/* Responsive fix if needed */
+@media (max-width: 768px) {
+  .about-images .row {
+    flex-direction: column;
+  }
+  .about-images .col-6 {
+    width: 100%;
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  #about h3 {
+    font-size: 22px;
+  }
+  #about .who-we-are {
+    font-size: 0.8rem;
+  }
+}
+
+section#team {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+section#team .section-title-container {
+  margin-bottom: 40px;
+}
+
+section#team .section-title-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3b4a5a;
+}
+
+section#team .section-title-container p {
+  font-style: italic;
+  color: #666;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+/* Grid layout with minimum gap */
+section#team .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 10px;
+}
+
+/* Team member card */
+section#team .team-member {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 35px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+section#team .team-member:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile image */
+section#team .team-member .pic img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #3b4a5a;
+}
+
+/* Member name and role */
+section#team .team-member .member-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2a2c30;
+  margin: 0 0 5px;
+}
+
+section#team .team-member .member-info span {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Social icons */
+section#team .team-member .social a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #3b4a5a;
+  transition: color 0.3s ease;
+}
+
+section#team .team-member .social a:hover {
+  color: #ff7e00;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  section#team .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section#team .team-member .pic {
+    margin-bottom: 15px;
+  }
+
+  section#team .team-member .social {
+    justify-content: center;
+  }
+}
