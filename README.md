@@ -6,7 +6,7 @@ Welcome to **Konkan Diaries**, a coastal travel blog and website designed to cap
 
 ## 📸 Live Demo
 
-👉 [Click here to visit the Live Site](https://your-live-demo-url.com)
+👉 [Click here to visit the Live Site](https://akanshathosar.github.io/konkan-diaries/)
 
 > Replace `https://your-live-demo-url.com` with your actual Netlify, GitHub Pages, or Vercel link.
 
